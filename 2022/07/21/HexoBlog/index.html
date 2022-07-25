@@ -203,6 +203,12 @@
   <article class="post-article">
     <section class="markdown-content"><h3 id="Hexo搭建博客"><a href="#Hexo搭建博客" class="headerlink" title="Hexo搭建博客"></a>Hexo搭建博客</h3><p>搭建过程参考</p>
 <p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/26625249">https://zhuanlan.zhihu.com/p/26625249</a></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo npm install hexo-cli -g # -g 全局安装</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><figcaption><span>l</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com # 查看ssh是否与github绑定成功</span><br></pre></td></tr></table></figure>
+
+
+
 <p>hexo常见命令</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">hexo n &quot;博客名称&quot;  =&gt; hexo new &quot;博客名称&quot;   #这两个都是创建新文章，前者是简写模式</span><br><span class="line">hexo p  =&gt; hexo publish</span><br><span class="line">hexo g  =&gt; hexo generate  #生成</span><br><span class="line">hexo s  =&gt; hexo server  #启动服务预览</span><br><span class="line">hexo d  =&gt; hexo deploy  #部署  </span><br><span class="line"></span><br><span class="line">hexo server   #Hexo 会监视文件变动并自动更新，无须重启服务器。</span><br><span class="line">hexo server -s   #静态模式</span><br><span class="line">hexo server -p 5000   #更改端口</span><br><span class="line">hexo server -i 192.168.1.1   #自定义IP</span><br><span class="line">hexo clean   #清除缓存，网页正常情况下可以忽略此条命令</span><br><span class="line">hexo g   #生成静态网页</span><br><span class="line">hexo d   #开始部署</span><br></pre></td></tr></table></figure>
 
@@ -210,10 +216,17 @@
 
 <p>这里之所以设置GitHub密钥原因是，通过非对称加密的公钥与私钥来完成加密，公钥放置在GitHub上，私钥放置在自己的电脑里。GitHub要求每次推送代码都是合法用户，所以每次推送都需要输入账号密码验证推送用户是否是合法用户，为了省去每次输入密码的步骤，采用了ssh，当你推送的时候，git就会匹配你的私钥跟GitHub上面的公钥是否是配对的，若是匹配就认为你是合法用户，则允许推送。这样可以保证每次的推送都是正确合法的。</p>
 <p><img src="/HexoBlog.assets/image-20220722%E4%B8%8B%E5%8D%8842954906.png" alt="image-20220722下午42954906"></p>
+<p><img src="/HexoBlog.assets/Screen%20Shot%202022-07-22%20at%206.43.17%20PM.png" alt="Screen Shot 2022-07-22 at 6.43.17 PM"></p>
+<p><img src="/HexoBlog.assets/image-20220722%E4%B8%8B%E5%8D%8864956428.png" alt="image-20220722下午64956428"></p>
+<p>F12开发者工具console里查看</p>
+<p><img src="/HexoBlog.assets/image-20220722%E4%B8%8B%E5%8D%8872917185.png" alt="image-20220722下午72917185"></p>
+<p><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/61339968/error-message-devtools-failed-to-load-sourcemap-could-not-load-content-for-chr">https://stackoverflow.com/questions/61339968/error-message-devtools-failed-to-load-sourcemap-could-not-load-content-for-chr</a></p>
 <h3 id="Hexo写作"><a href="#Hexo写作" class="headerlink" title="Hexo写作"></a>Hexo写作</h3><p><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/writing">https://hexo.io/zh-cn/docs/writing</a></p>
 <h3 id="报错"><a href="#报错" class="headerlink" title="报错"></a>报错</h3><p><img src="/HexoBlog.assets/image-20220722%E4%B8%8B%E5%8D%8832740787.png" alt="image-20220722下午32740787"></p>
 <p><img src="/HexoBlog.assets/image-20220722%E4%B8%8B%E5%8D%8832950707.png" alt="image-20220722下午32950707"></p>
 <p>tag和blog之间要有一个空格</p>
+<p>wordpress+azure</p>
+<p>GitHub action 自动部署</p>
 </section>
     <!-- Tags START -->
     
